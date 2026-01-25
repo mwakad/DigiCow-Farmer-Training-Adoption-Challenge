@@ -18,6 +18,29 @@ Predict the probability that a farmer will adopt a practice within 120 days of t
     3) Test.csv: Contains same features as Train.csv except the target variable.
     4) SampleSubmission.csv: Required submission file format. 
 
+## Primary Features: 
+| Feature Index | Feature Name              | Description                                                                 |
+|---------------|--------------------------|-----------------------------------------------------------------------------|
+| 0             | ID                       | Unique identifier for each farmer entry                                     |
+| 1             | gender                   | Gender of the farmer                                                        |
+| 2             | age                      | Age category of the farmer                                                  |
+| 3             | registration             | Registration method                                                         |
+| 4             | belong_to_cooperative    | Whether the farmer belongs to a cooperative (1 = yes, 0 = no)              |
+| 5             | county                   | County of residence                                                         |
+| 6             | subcounty                | Sub-county of residence                                                     |
+| 7             | ward                     | Ward of residence                                                           |
+| 8             | trainer_list             | Trainer who delivered the training                                          |
+| 9            | topics                   | List of possible training topics                                            |
+| 10            | num_trainings_date_30d   | Date of the farmer's first training                                         |
+| 11            | first_trainings_30d      | Trainings attended within 30 days of first training                        |
+| 12            | num_trainings_60d        | Trainings attended within 60 days of first training                         |
+| 13            | num_total_trainings      | Total trainings attended                                                    |
+| 14            | num_repeat_trainings     | Trainings attended after the first                                          |
+| 15            | days_to_second_training  | Days between first and second training                                      |
+| 16            | has_second_training      | Whether a second training occurred (1 = yes, 0 = no)                       |
+| 17            | num_unique_trainers_120d | Number of distinct trainers engaged within 120 days of first training      |
+| 18            | adopted_within_120_days                   | Target: adoption within 120 days of first training (1 = yes, 0 = no)       |
+
 ## Evaluation Metric
 A multi-metric evaluation:
     1. Log Loss (70%): To encourage the model to output probability estimates by penalizing confident but incorrect predictions more heavily.
