@@ -43,5 +43,7 @@ Predict the probability that a farmer will adopt a practice within 120 days of t
 
 ## Evaluation Metric
 A multi-metric evaluation:
+
     1. Log Loss (70%): To encourage the model to output probability estimates by penalizing confident but incorrect predictions more heavily.
+    
     2. ROC-AUC (30%): To measure the model’s ability to rank adopters above non-adopters across all possible thresholds to provide a stable assessment of overall ranking since the dataset is imbalanced. 
